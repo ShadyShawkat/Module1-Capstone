@@ -1,5 +1,26 @@
-@import './variables';
-@import './mixins';
-@import './resets';
-@import './home';
-@import './about';
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+@import "./variables";
+@import "./mixins";
+@import "./resets";
+@import "./home";
+@import "./about";
+@import "./responsive";
+
+.navbar {
+  height: 70px;
+
+  .navbar-nav {
+    background-color: $color-light;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .active {
+    color: $color-orange !important;
+  }
+}
+

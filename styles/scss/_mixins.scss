@@ -1,0 +1,17 @@
+@mixin font-cocogoose--uppercase {
+  font-family: 'COCOGOOSE', 'Assistant', 'sans-serif';
+  text-transform: uppercase;
+}
+
+// Responsive Mixins
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}

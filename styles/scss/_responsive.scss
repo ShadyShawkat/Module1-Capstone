@@ -1,0 +1,11 @@
+// Media mixin (768px < width < 992px)
+@include media-md {
+  
+}
+
+// Media mixin (992px < width)
+@include media-lg {
+  .navbar-nav {
+    background-color: transparent !important;
+  }
+}
