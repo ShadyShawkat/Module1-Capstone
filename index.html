@@ -24,7 +24,7 @@
     <header class="mb-5">
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light pb-0">
         <div class="container-fluid px-0 px-md-3">
-          <a class="navbar-brand d-none d-md-block px-3" href="#">Navbar</a>
+          <a class="navbar-brand d-none d-md-block px-3" href="./index.html">Navbar</a>
           <button
             class="navbar-toggler px-3"
             type="button"
@@ -39,10 +39,10 @@
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ms-auto mb-lg-0 mt-1">
               <li class="nav-item p-1">
-                <a class="nav-link active ps-3" href="#">Home</a>
+                <a class="nav-link active ps-3" href="./index.html">Home</a>
               </li>
               <li class="nav-item p-1">
-                <a class="nav-link ps-3" href="#">About</a>
+                <a class="nav-link ps-3" href="./about.html">About</a>
               </li>
             </ul>
           </div>
@@ -69,34 +69,34 @@
     <section class="main-event-section">
       <h2 class="main-event-section__header">Main Event</h2>
       <ul
-        class="main-event-section__topics d-flex flex-column px-3"
+        class="main-event-section__topics d-flex flex-column flex-md-row px-3 gap-2 justify-content-md-center px-md-5"
         role="list"
       >
-        <li class="d-flex">
-          <i class="fas fa-music col-1"></i>
-          <h5 class="col-5 col-sm-3">Sing</h5>
+        <li class="d-flex flex-md-column p-2 p-md-3">
+          <i class="fas fa-music col-1 col-md-auto"></i>
+          <h5 class="col-5 col-sm-3 col-md-auto">Sing</h5>
           <p>
             Meet the band and attend a live show full of your favourite songs.
           </p>
         </li>
-        <li class="d-flex">
-          <i class="fas fa-users col-1"></i>
-          <h5 class="col-5 col-sm-3">Meet</h5>
+        <li class="d-flex flex-md-column p-2 p-md-3">
+          <i class="fas fa-users col-1 col-md-auto"></i>
+          <h5 class="col-5 col-sm-3 col-md-auto">Meet</h5>
           <p>
             Join amazing people like yourself and share your love for music with
             others.
           </p>
         </li>
-        <li class="d-flex">
-          <i class="fas fa-glass-cheers col-1"></i>
-          <h5 class="col-5 col-sm-3">Celebrate</h5>
+        <li class="d-flex flex-md-column p-2 p-md-3">
+          <i class="fas fa-glass-cheers col-1 col-md-auto"></i>
+          <h5 class="col-5 col-sm-3 col-md-auto">Celebrate</h5>
           <p>
             Celebrate Coldplay's 20th anniversary with us and ahave a good time.
           </p>
         </li>
-        <li class="d-flex">
-          <i class="fas fa-donate col-1"></i>
-          <h5 class="col-5 col-sm-3">Contribute</h5>
+        <li class="d-flex flex-md-column p-2 p-md-3">
+          <i class="fas fa-donate col-1 col-md-auto"></i>
+          <h5 class="col-5 col-sm-3 col-md-auto">Contribute</h5>
           <p>
             Donate for a greater cause to conquer cancer and beat it for good.
           </p>
@@ -108,37 +108,63 @@
     <section class="featured-guests-section">
       <h2 class="featured-guests-section__header">Featured Guests</h2>
       <ul
-        class="featured-guests-section__guests d-flex flex-column"
+        class="featured-guests-section__guests d-flex flex-column flex-md-row align-items-md-center flex-md-wrap"
         role="list"
       >
-        <li>
-          <img
-            class="guest-img col-4"
-            src="./assets/images/feat-guest-edsheeran.png"
-            alt="Ed Sheeran image"
-          />
-          <div class="guest-info col-8">
-            <h3>Ed Sheeran</h3>
-            <p class="guest-discription">
-              Get to see Ed Sheeran playing "Fix You" with us and much more.
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="guest-img col-4"
-            src="./assets/images/feat-guest-beyonce.png"
-            alt="Beyonce image"
-          />
-          <div class="guest-info col-8">
-            <h3>Beyonce</h3>
-            <p class="guest-discription">
-              Meet Beyonce and listen to the beloved "Hymn For The Weekend".
-            </p>
-          </div>
-        </li>
+      <li class="col-md-5">
+        <img
+          class="guest-img col-4"
+          src="./assets/images/feat-guest-edsheeran.png"
+          alt="Ed Sheeran image"
+        />
+        <div class="guest-info col-8">
+          <h3>Ed Sheeran</h3>
+          <p class="guest-discription">
+            Get to see Ed Sheeran playing "Fix You" with us and much more.
+          </p>
+        </div>
+      </li>
+      <li class="col-md-5">
+        <img
+          class="guest-img col-4"
+          src="./assets/images/feat-guest-beyonce.png"
+          alt="Beyonce image"
+        />
+        <div class="guest-info col-8">
+          <h3>Beyonce</h3>
+          <p class="guest-discription">
+            Meet Beyonce and listen to the beloved "Hymn For The Weekend".
+          </p>
+        </div>
+      </li>
+      <li class="col-md-5 d-none d-md-flex">
+        <img
+          class="guest-img col-4"
+          src="./assets/images/feat-guest-edsheeran.png"
+          alt="Ed Sheeran image"
+        />
+        <div class="guest-info col-8">
+          <h3>Ed Sheeran</h3>
+          <p class="guest-discription">
+            Get to see Ed Sheeran playing "Fix You" with us and much more.
+          </p>
+        </div>
+      </li>
+      <li class="col-md-5 d-none d-md-flex">
+        <img
+          class="guest-img col-4"
+          src="./assets/images/feat-guest-beyonce.png"
+          alt="Beyonce image"
+        />
+        <div class="guest-info col-8">
+          <h3>Beyonce</h3>
+          <p class="guest-discription">
+            Meet Beyonce and listen to the beloved "Hymn For The Weekend".
+          </p>
+        </div>
+      </li>
       </ul>
-      <button type="button" class="featured-guests-section__more-btn">
+      <button type="button" class="featured-guests-section__more-btn mt-4 d-md-none">
         More
       </button>
     </section>
@@ -146,36 +172,39 @@
     <footer class="footer-section">
       <div class="footer-section__partners bg-dark text-light pt-4 pb-5">
         <h2 class="footer-header text-center mt-4">Partner</h2>
-        <div class="container partners-logos d-flex flex-wrap mt-5 align-items-center justify-content-center">
-          <img
-            class="img-responsive"
-            src="./assets/images/partner-cocacola.png"
-            alt="Cocacola Logo"
-          />
-
-          <img
-            class="img-responsive"
-            src="./assets/images/partner-mountaindew.png"
-            alt="Mountain Dew logo"
-          />
-
-          <img
-            class="img-responsive"
-            src="./assets/images/partner-msi.png"
-            alt="MSI logo"
-          />
-
-          <img
-            class="img-responsive"
-            src="./assets/images/partner-redbull.png"
-            alt="Red Bull logo"
-          />
-
-          <img
-            class="img-responsive"
-            src="./assets/images/partner-spotify.png"
-            alt="Spotify logo"
-          />
+        <div class="container partners-logos mt-5">
+          <ul role="list" class="d-flex flex-wrap align-items-center justify-content-center">
+            <li>
+              <img
+                src="./assets/images/partner-cocacola.png"
+                alt="Cocacola Logo"
+              />
+            </li>
+            <li>
+              <img
+                src="./assets/images/partner-mountaindew.png"
+                alt="Mountain Dew logo"
+              />
+            </li>
+            <li>
+              <img
+                src="./assets/images/partner-msi.png"
+                alt="MSI logo"
+              />
+            </li>
+            <li>
+              <img
+                src="./assets/images/partner-redbull.png"
+                alt="Red Bull logo"
+              />
+            </li>
+            <li>
+              <img
+                src="./assets/images/partner-spotify.png"
+                alt="Spotify logo"
+              />
+            </li>
+          </ul>
         </div>
       </div>
 

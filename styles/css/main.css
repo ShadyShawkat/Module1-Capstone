@@ -33,6 +33,7 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  padding-left: 0;
 }
 
 /* Set core root defaults */
@@ -94,6 +95,8 @@ button {
   position: relative;
   gap: 10px;
   padding: 100px 20px;
+  padding-left: Max(calc(20vw - 100px), 20px);
+  padding-right: Max(calc(30vw - 100px), 20px);
 }
 
 .intro-section::before {
@@ -107,7 +110,7 @@ button {
   width: 100%;
   z-index: -1;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 @supports (-webkit-background-clip: text) {
@@ -189,17 +192,12 @@ button {
   border-bottom: 1px solid #ec5242;
 }
 
-.main-event-section__topics {
-  gap: 15px;
-}
-
 .main-event-section__topics li {
   background-color: #d3d3d338;
   gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
 }
 
 .main-event-section__topics li i {
@@ -221,7 +219,7 @@ button {
 }
 
 .featured-guests-section {
-  padding: 50px 0;
+  padding: 10vw;
 }
 
 .featured-guests-section__header {
@@ -245,8 +243,6 @@ button {
 
 .featured-guests-section__guests {
   gap: 45px;
-  padding-left: 10vw;
-  padding-right: 5vw;
 }
 
 .featured-guests-section__guests li {
@@ -265,8 +261,8 @@ button {
   height: 60px;
   width: 60px;
   display: block;
-  top: -20px;
-  left: -20px;
+  top: -15px;
+  left: -15px;
   z-index: -1;
   opacity: 0.9;
 }
@@ -304,26 +300,111 @@ button {
   display: block;
   border-bottom: 4px solid #ec5242;
   border-left: 4px solid #ec5242;
-  left: 60%;
+  left: 50%;
   top: 35%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: translateX(250%) rotate(-45deg);
+          transform: translateX(250%) rotate(-45deg);
+}
+
+.about-page .intro-section {
+  padding-left: Max(calc(25vw - 100px), 20px);
+  padding-right: Max(calc(25vw - 100px), 20px);
+}
+
+.intro-section__website {
+  color: unset;
+  text-underline-offset: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.about-section__header,
+.past-concerts-section__header {
+  position: relative;
+}
+
+.about-section__header::before,
+.past-concerts-section__header::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 50px;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-bottom: 1px solid #ec5242;
+}
+
+.about-section {
+  border-bottom: 2px solid #d3d3d3;
+}
+
+.about-section .about-section__image {
+  margin: 20px;
+  max-width: 400px;
+}
+
+.past-concerts li:nth-child(1) {
+  position: relative;
+  max-width: 450px;
+  width: 90vw;
+  height: 20vw;
+  max-height: 250px;
+  min-height: 125px;
+  cursor: pointer;
+}
+
+.past-concerts li:nth-child(1)::before {
+  background: radial-gradient(#000000de, #5f000059, #ffffff36), url("../../assets/images/past-concert-1.png") repeat center center;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.past-concerts li:nth-child(2) {
+  position: relative;
+  max-width: 450px;
+  width: 90vw;
+  height: 20vw;
+  max-height: 250px;
+  min-height: 125px;
+  cursor: pointer;
+}
+
+.past-concerts li:nth-child(2)::before {
+  background: radial-gradient(#000000de, #5f000059, #ffffff36), url("../../assets/images/past-concert-2.png") repeat center center;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {
-  .main-event-section__topics p {
-    text-align: justify;
+  .main-event-section__topics li {
+    max-width: 250px;
+  }
+  .main-event-section__topics li p {
+    text-align: center;
+  }
+  .featured-guests-section {
+    padding-left: Max(calc(25vw - 100px), 10vw);
+    padding-right: Max(calc(25vw - 100px), 10vw);
   }
   .featured-guests-section__guests {
-    gap: 75px;
+    gap: 30px;
   }
   .featured-guests-section__guests li::before {
-    height: 99px;
-    width: 99px;
-  }
-  .featured-guests-section__guests li .guest-img {
-    height: 165px;
-    width: 165px;
+    opacity: 0.4;
   }
   .featured-guests-section__guests li .guest-info h3 {
     font-size: 28px;
@@ -336,6 +417,17 @@ button {
 @media screen and (min-width: 992px) {
   .navbar-nav {
     background-color: transparent !important;
+  }
+  .featured-guests-section__guests {
+    gap: 80px;
+  }
+  .featured-guests-section__guests li::before {
+    height: 99px;
+    width: 99px;
+  }
+  .featured-guests-section__guests li .guest-img {
+    height: 165px;
+    width: 165px;
   }
 }
 
