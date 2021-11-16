@@ -68,6 +68,10 @@ select {
   font: inherit;
 }
 
+button {
+  all: unset;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -208,7 +212,6 @@ select {
 }
 
 .main-event-section__btn {
-  all: unset;
   background: #ec5242;
   padding: 15px 40px;
   font-weight: bold;
@@ -217,9 +220,116 @@ select {
   margin: 40px auto 0 auto;
 }
 
+.featured-guests-section {
+  padding: 50px 0;
+}
+
+.featured-guests-section__header {
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.featured-guests-section__header::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 50px;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-bottom: 1px solid #ec5242;
+}
+
+.featured-guests-section__guests {
+  gap: 45px;
+  padding-left: 10vw;
+  padding-right: 5vw;
+}
+
+.featured-guests-section__guests li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  position: relative;
+}
+
+.featured-guests-section__guests li::before {
+  position: absolute;
+  content: "";
+  background: url("../../assets/images/black-white-checkers.png");
+  background-size: 60%;
+  height: 60px;
+  width: 60px;
+  display: block;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.featured-guests-section__guests li .guest-img {
+  height: 100px;
+  width: 100px;
+}
+
+.featured-guests-section__guests li .guest-info h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.featured-guests-section__guests li .guest-info .guest-discription {
+  font-size: 16px;
+}
+
+.featured-guests-section__more-btn {
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  margin: 20px auto;
+  padding: 15px 30px;
+  display: block;
+  width: 73%;
+  text-align: center;
+  position: relative;
+}
+
+.featured-guests-section__more-btn::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-bottom: 4px solid #ec5242;
+  border-left: 4px solid #ec5242;
+  left: 60%;
+  top: 35%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 @media screen and (min-width: 768px) {
   .main-event-section__topics p {
     text-align: justify;
+  }
+  .featured-guests-section__guests {
+    gap: 75px;
+  }
+  .featured-guests-section__guests li::before {
+    height: 99px;
+    width: 99px;
+  }
+  .featured-guests-section__guests li .guest-img {
+    height: 165px;
+    width: 165px;
+  }
+  .featured-guests-section__guests li .guest-info h3 {
+    font-size: 28px;
+  }
+  .featured-guests-section__guests li .guest-info .guest-discription {
+    font-size: 20px;
   }
 }
 
@@ -243,5 +353,37 @@ select {
 
 .navbar .active {
   color: #ec5242 !important;
+}
+
+.footer-section__partners .footer-header {
+  position: relative;
+}
+
+.footer-section__partners .footer-header::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 50px;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-bottom: 1px solid #ec5242;
+}
+
+.footer-section__partners .partners-logos img {
+  width: 25vw;
+  min-width: 100px;
+  max-width: 200px;
+  height: auto;
+}
+
+.footer-section__banner .cc-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-section__banner p {
+  font-size: 14px;
 }
 /*# sourceMappingURL=main.css.map */
