@@ -1,6 +1,8 @@
 // Media mixin (768px < width < 992px)
 @include media-md {
-  
+  .main-event-section__topics p {
+    text-align: justify;
+  }
 }
 
 // Media mixin (992px < width)

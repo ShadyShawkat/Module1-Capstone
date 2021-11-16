@@ -3,7 +3,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
 }
 
 /* Remove default margin */
@@ -36,6 +35,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: 'Lato', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */

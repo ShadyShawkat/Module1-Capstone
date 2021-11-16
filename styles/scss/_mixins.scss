@@ -3,6 +3,29 @@
   text-transform: uppercase;
 }
 
+@mixin header-underline($width) {
+  display: block;
+  content: "";
+  position: absolute;
+  width: $width;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 1px solid $color-orange;
+}
+
+@mixin bg-img-control($img-url) {
+  background: url($img-url) repeat center center;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
 // Responsive Mixins
 @mixin media-md {
   @media screen and (min-width: 768px) {

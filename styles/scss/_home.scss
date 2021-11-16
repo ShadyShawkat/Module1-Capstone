@@ -4,18 +4,8 @@
   padding: 100px 20px;
 
   &::before {
-    // background-image: url("/assets/images/intro-bg-img.png");
-    background-image: url("../../assets/images/intro-bg-img.png");
+    @include bg-img-control("../../assets/images/intro-bg-img.png");
     background-size: cover;
-    background-position: center bottom;
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
     opacity: 0.3;
   }
 
@@ -57,5 +47,57 @@
 
   &__place {
     color: $color-dark;
+  }
+}
+
+.main-event-section {
+  position: relative;
+  color: white;
+  padding: 50px 0;
+
+  &::before {
+    @include bg-img-control("../../assets/images/main-event-bg-img.png");
+    filter: brightness(60%);
+  }
+
+  &__header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+
+
+    &::after {
+      @include header-underline($header-underline-width)
+    }
+  }
+
+  &__topics {
+    gap: 15px;
+
+    li {
+      background-color: #{$color-light}38;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+
+      i {
+        text-align: center;
+      }
+
+      h5 {
+        color: $color-orange;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__btn {
+    all: unset;
+    background: $color-orange;
+    padding: 15px 40px;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    display: block;
+    margin: 40px auto 0 auto;
   }
 }
