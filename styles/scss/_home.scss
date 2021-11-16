@@ -65,9 +65,8 @@
     position: relative;
     margin-bottom: 50px;
 
-
     &::after {
-      @include header-underline($header-underline-width)
+      @include header-underline($header-underline-width);
     }
   }
 
@@ -92,7 +91,6 @@
   }
 
   &__btn {
-    all: unset;
     background: $color-orange;
     padding: 15px 40px;
     font-weight: bold;
@@ -100,4 +98,85 @@
     display: block;
     margin: 40px auto 0 auto;
   }
+}
+
+.featured-guests-section {
+  padding: 50px 0;
+
+  &__header {
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 50px;
+
+    &::after {
+      @include header-underline($header-underline-width);
+    }
+  }
+
+  &__guests {
+    gap: 45px;
+    padding-left: 10vw;
+    padding-right: 5vw;
+
+    li {
+      display: flex;
+      gap: 15px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background: url("../../assets/images/black-white-checkers.png");
+        background-size: 60%;
+        height: 0.6 * map-get($feature-guest-img-widths, sm);
+        width: 0.6 * map-get($feature-guest-img-widths, sm);
+        display: block;
+        top: -20px;
+        left: -20px;
+        z-index: -1;
+        opacity: 0.9;
+      }
+
+      .guest-img {
+        height: map-get($feature-guest-img-widths, sm);
+        width: map-get($feature-guest-img-widths, sm);
+      }
+
+      .guest-info {
+        h3 {
+          font-size: 22px;
+          font-weight: bold;
+        }
+
+        .guest-discription {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+      &__more-btn {
+        border: 1px solid $color-light;
+        border-radius: 3px;
+        margin: 20px auto;
+        padding: 15px 30px;
+        display: block;
+        width: 73%;
+        text-align: center;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          display: block;
+          border-bottom: 4px solid $color-orange;
+          border-left: 4px solid $color-orange;
+          left: 60%;
+          top: 35%;
+          transform: rotate(-45deg);
+        }
+      }
 }

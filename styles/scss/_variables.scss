@@ -3,6 +3,11 @@ $color-dark: #272a31;
 $color-orange: #ec5242;
 $color-light: #d3d3d3;
 $header-underline-width: 50px;
+$feature-guest-img-widths: (
+  "sm": 100px,
+  "md": 165px,
+);
+
 
 @font-face {
   font-family: "COCOGOOSE";

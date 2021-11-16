@@ -3,6 +3,33 @@
   .main-event-section__topics p {
     text-align: justify;
   }
+  .featured-guests-section {
+    &__guests {
+    gap: 75px;
+      li {
+        &::before {
+          height: 0.6 * map-get($feature-guest-img-widths, md);
+          width: 0.6 * map-get($feature-guest-img-widths, md);
+        }
+
+        .guest-img {
+          height: map-get($feature-guest-img-widths, md);
+          width: map-get($feature-guest-img-widths, md);
+        }
+
+        .guest-info {
+          h3 {
+            font-size: 28px;
+          }
+  
+          .guest-discription {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 // Media mixin (992px < width)
