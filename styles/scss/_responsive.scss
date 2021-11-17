@@ -1,5 +1,10 @@
 // Media mixin (768px < width < 992px)
 @include media-md {
+  .navbar {  
+    position: fixed !important;
+    top: 0;
+    background-color: white !important; 
+  }
   .main-event-section__topics {
     li {
       max-width: 250px;
@@ -12,25 +17,26 @@
     padding-left: Max(calc(25vw - 100px), 10vw);
     padding-right: Max(calc(25vw - 100px), 10vw);
 
-
     &__guests {
-      // padding-left: 5vw !important;
+      max-height: initial !important;
       gap: 30px;
+      overflow: initial;
       li {
+        flex-basis: 47%;
+        margin-top: 0;
+        margin-left: 0;
         &::before {
           opacity: 0.4;
         }
 
-        .guest-img {
-        }
-
         .guest-info {
           h3 {
-            font-size: 28px;
+            font-size: 1.1rem;
           }
 
           .guest-discription {
-            font-size: 20px;
+            font-size: .7rem;
+            line-height: .9rem;
           }
         }
       }
@@ -45,16 +51,31 @@
   }
   .featured-guests-section {
     &__guests {
-      gap: 80px;
+      gap: 40px;
       li {
+        flex-basis: 47%;
+        margin-top: 0;
+        margin-left: 0;
+
         &::before {
           height: 0.6 * map-get($feature-guest-img-widths, md);
-          width: 0.6 * map-get($feature-guest-img-widths, md);
+          min-width: 0.6 * map-get($feature-guest-img-widths, md);
         }
 
         .guest-img {
           height: map-get($feature-guest-img-widths, md);
-          width: map-get($feature-guest-img-widths, md);
+          min-width: map-get($feature-guest-img-widths, md);
+        }
+
+        .guest-info {
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          .guest-discription {
+            font-size: .85rem;
+            line-height: 1rem;
+          }
         }
       }
     }

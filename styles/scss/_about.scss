@@ -1,6 +1,12 @@
-.about-page .intro-section {
-  padding-left: Max(calc(25vw - 100px), 20px);
-  padding-right: Max(calc(25vw - 100px), 20px);
+.about-page {
+  .intro-section {
+    padding-left: Max(calc(25vw - 100px), 20px);
+    padding-right: Max(calc(25vw - 100px), 20px);
+  }
+
+  .footer-section__banner .cc-logo {
+    filter: invert(85%);
+  }
 }
 
 .intro-section__website {
@@ -29,7 +35,6 @@
 }
 
 .past-concerts {
-
   @for $i from 1 through 2 {
     li:nth-child(#{$i}) {
       position: relative;
@@ -40,8 +45,9 @@
       min-height: 125px;
       cursor: pointer;
 
-      &::before{
-        background: radial-gradient(#000000de, #5f000059,#ffffff36), url("../../assets/images/past-concert-#{$i}.png") repeat center center;
+      &::before {
+        background: radial-gradient(#000000de, #5f000059, #ffffff36),
+          url("../../assets/images/past-concert-#{$i}.png") repeat center center;
         display: block;
         content: "";
         position: absolute;

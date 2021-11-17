@@ -10,10 +10,11 @@
 
 .navbar {
   height: 70px;
-
-  .navbar-nav {
-    background-color: $color-light;
-  }
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+    // background-color: white;
 
   .navbar-toggler {
     border: none;
