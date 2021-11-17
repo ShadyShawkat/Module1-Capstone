@@ -1,0 +1,59 @@
+.about-page {
+  .intro-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.intro-section__website {
+  color: unset;
+  text-underline-offset: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.about-section__header,
+.past-concerts-section__header {
+  position: relative;
+
+  &::before {
+    @include header-underline($header-underline-width);
+  }
+}
+
+.about-section {
+  border-bottom: 2px solid $color-light;
+
+  .about-section__image {
+    margin: 20px;
+    max-width: 400px;
+  }
+}
+
+.past-concerts {
+  @for $i from 1 through 2 {
+    li:nth-child(#{$i}) {
+      position: relative;
+      max-width: 450px;
+      width: 90vw;
+      height: 20vw;
+      max-height: 250px;
+      min-height: 125px;
+      cursor: pointer;
+
+      &::before {
+        background:
+          radial-gradient(#000000de, #5f000059, #ffffff36),
+          url("../../assets/images/past-concert-#{$i}.png") repeat center center;
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import "./variables";
+@import "./mixins";
+@import "./resets";
+@import "./home";
+@import "./about";
+@import "./responsive";
+
+.nav-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+
+  .black-nav a {
+    font-size: 0.85rem;
+  }
+}
+
+.navbar {
+  height: 70px;
+  // background-color: white;
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .active {
+    color: $color-orange !important;
+  }
+}
+
+.footer-section {
+  &__partners {
+    .footer-header {
+      position: relative;
+
+      &::before {
+        @include header-underline($header-underline-width);
+      }
+    }
+
+    .partners-logos {
+      img {
+        width: 25vw;
+        min-width: 100px;
+        max-width: 200px;
+        height: auto;
+      }
+    }
+  }
+
+  &__banner {
+    .cc-logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.about-page {
+  .footer-section__banner .cc-logo {
+    filter: invert(85%);
+  }
+}

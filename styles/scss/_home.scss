@@ -1,0 +1,209 @@
+.intro-section {
+  position: relative;
+  gap: 10px;
+  padding: 200px 20px 100px 20px;
+  min-height: 100vh;
+
+  &::before {
+    @include bg-img-control("../../assets/images/intro-bg-img.png");
+
+    background-size: cover;
+    opacity: 0.2;
+  }
+
+  &__header {
+    @supports (-webkit-background-clip: text) {
+      background: url("../../assets/images/intro-header-text-bg.png") no-repeat;
+      background-size: 100vw;
+      color: transparent;
+      -webkit-background-clip: text;
+    }
+
+    .intro-section__text {
+      font-size: 1.45rem;
+      color: $color-orange;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      @include font-cocogoose--uppercase;
+    }
+  }
+
+  &__description {
+    background-color: $color-light;
+    border: 3px solid white;
+    padding: 10px;
+    text-align: justify;
+    color: $color-dark;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__date {
+    @include font-cocogoose--uppercase;
+
+    color: $color-dark;
+  }
+
+  &__place {
+    color: $color-dark;
+  }
+}
+
+.main-event-section {
+  position: relative;
+  color: white;
+  padding: 50px 0;
+
+  &::before {
+    @include bg-img-control("../../assets/images/main-event-bg-img.png");
+
+    filter: brightness(60%);
+  }
+
+  &__header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+
+    &::after {
+      @include header-underline($header-underline-width);
+    }
+  }
+
+  &__topics {
+    li {
+      background-color: #{$color-light}38;
+      gap: 10px;
+      align-items: center;
+
+      i {
+        text-align: center;
+      }
+
+      h5 {
+        color: $color-orange;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__btn {
+    background: $color-orange;
+    padding: 15px 40px;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    display: block;
+    margin: 40px auto 0 auto;
+  }
+}
+
+.featured-guests-section {
+  padding: 10vw;
+
+  &__header {
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 50px;
+
+    &::after {
+      @include header-underline($header-underline-width);
+    }
+  }
+
+  &__guests {
+    gap: 30px;
+    overflow: hidden;
+    max-height: 260px;
+    transition: max-height 0.5s linear;
+
+    li {
+      display: flex;
+      gap: 15px;
+      position: relative;
+      margin-top: 15px;
+      margin-left: 15px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background: url("../../assets/images/black-white-checkers.png");
+        background-size: 60%;
+        height: 0.6 * map-get($feature-guest-img-widths, sm);
+        width: 0.6 * map-get($feature-guest-img-widths, sm);
+        display: block;
+        top: -15px;
+        left: -15px;
+        z-index: -1;
+        opacity: 0.9;
+      }
+
+      .guest-img {
+        height: map-get($feature-guest-img-widths, sm);
+        min-width: map-get($feature-guest-img-widths, sm);
+      }
+
+      .guest-info {
+        h3 {
+          font-size: 22px;
+          font-weight: bold;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            background: $color-light;
+            height: 2px;
+            width: 20px;
+            top: 130%;
+            display: block;
+          }
+        }
+
+        .guest-discription {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  &__more-btn {
+    border: 1px solid $color-light;
+    border-radius: 3px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    display: block;
+    width: 73%;
+    text-align: center;
+    position: relative;
+    transition: all 0.25s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      display: block;
+      border-bottom: 4px solid $color-orange;
+      border-left: 4px solid $color-orange;
+      left: 50%;
+      top: 35%;
+      transform: translateX(250%) rotate(-45deg);
+      transition: all 0.25s linear;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-orange;
+      color: white;
+
+      &::before {
+        border-bottom-color: $color-dark;
+        border-left-color: $color-dark;
+      }
+    }
+  }
+}
