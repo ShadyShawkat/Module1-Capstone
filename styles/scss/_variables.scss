@@ -8,10 +8,10 @@ $feature-guest-img-widths: (
   "md": 165px,
 );
 
-
 @font-face {
   font-family: "COCOGOOSE";
-  src: url("../../assets/fonts/Cocogoose_trial.eot?") format("eot"),
+  src:
+    url("../../assets/fonts/Cocogoose_trial.eot?") format("eot"),
     url("../../assets/fonts/Cocogoose_trial.woff") format("woff"),
     url("../../assets/fonts/Cocogoose_trial.ttf") format("truetype"),
     url("../../assets/fonts/Cocogoose_trial.svg#COCOGOOSE") format("svg");

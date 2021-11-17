@@ -1,30 +1,48 @@
 // Media mixin (768px < width < 992px)
 @include media-md {
-  .navbar {  
+  .navbar {
     position: fixed !important;
     top: 0;
-    background-color: white !important; 
+    background-color: white !important;
   }
+
+  .intro-section {
+    padding-left: 15%;
+    padding-right: 20%;
+
+    .intro-section__description {
+      max-width: 800px;
+    }
+  }
+
+  .about-page {
+    .intro-section {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+  }
+
   .main-event-section__topics {
     li {
       max-width: 250px;
+
       p {
         text-align: center;
       }
     }
   }
-  .featured-guests-section {
-    padding-left: Max(calc(25vw - 100px), 10vw);
-    padding-right: Max(calc(25vw - 100px), 10vw);
 
+  .featured-guests-section {
     &__guests {
       max-height: initial !important;
       gap: 30px;
       overflow: initial;
+
       li {
         flex-basis: 47%;
         margin-top: 0;
         margin-left: 0;
+
         &::before {
           opacity: 0.4;
         }
@@ -35,8 +53,8 @@
           }
 
           .guest-discription {
-            font-size: .7rem;
-            line-height: .9rem;
+            font-size: 0.7rem;
+            line-height: 0.9rem;
           }
         }
       }
@@ -49,9 +67,11 @@
   .navbar-nav {
     background-color: transparent !important;
   }
+
   .featured-guests-section {
     &__guests {
       gap: 40px;
+
       li {
         flex-basis: 47%;
         margin-top: 0;
@@ -73,7 +93,7 @@
           }
 
           .guest-discription {
-            font-size: .85rem;
+            font-size: 0.85rem;
             line-height: 1rem;
           }
         }

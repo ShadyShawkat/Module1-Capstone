@@ -1,13 +1,12 @@
 .intro-section {
   position: relative;
   gap: 10px;
-  padding: 100px 20px;
-  padding-left: Max(calc(20vw - 100px), 20px);
-  padding-right: Max(calc(30vw - 100px), 20px);
+  padding: 200px 20px 100px 20px;
   min-height: 100vh;
 
   &::before {
     @include bg-img-control("../../assets/images/intro-bg-img.png");
+
     background-size: cover;
     opacity: 0.2;
   }
@@ -18,7 +17,6 @@
       background-size: 100vw;
       color: transparent;
       -webkit-background-clip: text;
-      background-clip: text;
     }
 
     .intro-section__text {
@@ -44,6 +42,7 @@
 
   &__date {
     @include font-cocogoose--uppercase;
+
     color: $color-dark;
   }
 
@@ -59,6 +58,7 @@
 
   &::before {
     @include bg-img-control("../../assets/images/main-event-bg-img.png");
+
     filter: brightness(60%);
   }
 
@@ -181,17 +181,6 @@
     position: relative;
     transition: all 0.25s linear;
 
-    &:hover,
-    &:focus-visible {
-      background-color: $color-orange;
-      color: white;
-
-      &::before {
-        border-bottom-color: $color-dark;
-        border-left-color: $color-dark;
-      }
-    }
-
     &::before {
       content: "";
       position: absolute;
@@ -204,6 +193,17 @@
       top: 35%;
       transform: translateX(250%) rotate(-45deg);
       transition: all 0.25s linear;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-orange;
+      color: white;
+
+      &::before {
+        border-bottom-color: $color-dark;
+        border-left-color: $color-dark;
+      }
     }
   }
 }
