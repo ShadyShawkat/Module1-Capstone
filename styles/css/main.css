@@ -97,6 +97,7 @@ button {
   padding: 100px 20px;
   padding-left: Max(calc(20vw - 100px), 20px);
   padding-right: Max(calc(30vw - 100px), 20px);
+  min-height: 100vh;
 }
 
 .intro-section::before {
@@ -242,7 +243,11 @@ button {
 }
 
 .featured-guests-section__guests {
-  gap: 45px;
+  gap: 30px;
+  overflow: hidden;
+  max-height: 260px;
+  -webkit-transition: max-height 0.5s linear;
+  transition: max-height 0.5s linear;
 }
 
 .featured-guests-section__guests li {
@@ -251,6 +256,8 @@ button {
   display: flex;
   gap: 15px;
   position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 .featured-guests-section__guests li::before {
@@ -269,16 +276,28 @@ button {
 
 .featured-guests-section__guests li .guest-img {
   height: 100px;
-  width: 100px;
+  min-width: 100px;
 }
 
 .featured-guests-section__guests li .guest-info h3 {
   font-size: 22px;
   font-weight: bold;
+  position: relative;
+}
+
+.featured-guests-section__guests li .guest-info h3::after {
+  position: absolute;
+  content: "";
+  background: #d3d3d3;
+  height: 2px;
+  width: 20px;
+  top: 130%;
+  display: block;
 }
 
 .featured-guests-section__guests li .guest-info .guest-discription {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .featured-guests-section__more-btn {
@@ -290,6 +309,18 @@ button {
   width: 73%;
   text-align: center;
   position: relative;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.featured-guests-section__more-btn:hover, .featured-guests-section__more-btn:focus-visible {
+  background-color: #ec5242;
+  color: white;
+}
+
+.featured-guests-section__more-btn:hover::before, .featured-guests-section__more-btn:focus-visible::before {
+  border-bottom-color: #272a31;
+  border-left-color: #272a31;
 }
 
 .featured-guests-section__more-btn::before {
@@ -304,11 +335,18 @@ button {
   top: 35%;
   -webkit-transform: translateX(250%) rotate(-45deg);
           transform: translateX(250%) rotate(-45deg);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 
 .about-page .intro-section {
   padding-left: Max(calc(25vw - 100px), 20px);
   padding-right: Max(calc(25vw - 100px), 20px);
+}
+
+.about-page .footer-section__banner .cc-logo {
+  -webkit-filter: invert(85%);
+          filter: invert(85%);
 }
 
 .intro-section__website {
@@ -390,6 +428,11 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .navbar {
+    position: fixed !important;
+    top: 0;
+    background-color: white !important;
+  }
   .main-event-section__topics li {
     max-width: 250px;
   }
@@ -401,16 +444,25 @@ button {
     padding-right: Max(calc(25vw - 100px), 10vw);
   }
   .featured-guests-section__guests {
+    max-height: initial !important;
     gap: 30px;
+    overflow: initial;
+  }
+  .featured-guests-section__guests li {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    margin-top: 0;
+    margin-left: 0;
   }
   .featured-guests-section__guests li::before {
     opacity: 0.4;
   }
   .featured-guests-section__guests li .guest-info h3 {
-    font-size: 28px;
+    font-size: 1.1rem;
   }
   .featured-guests-section__guests li .guest-info .guest-discription {
-    font-size: 20px;
+    font-size: .7rem;
+    line-height: .9rem;
   }
 }
 
@@ -419,24 +471,37 @@ button {
     background-color: transparent !important;
   }
   .featured-guests-section__guests {
-    gap: 80px;
+    gap: 40px;
+  }
+  .featured-guests-section__guests li {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    margin-top: 0;
+    margin-left: 0;
   }
   .featured-guests-section__guests li::before {
     height: 99px;
-    width: 99px;
+    min-width: 99px;
   }
   .featured-guests-section__guests li .guest-img {
     height: 165px;
-    width: 165px;
+    min-width: 165px;
+  }
+  .featured-guests-section__guests li .guest-info h3 {
+    font-size: 1.2rem;
+  }
+  .featured-guests-section__guests li .guest-info .guest-discription {
+    font-size: .85rem;
+    line-height: 1rem;
   }
 }
 
 .navbar {
   height: 70px;
-}
-
-.navbar .navbar-nav {
-  background-color: #d3d3d3;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
 }
 
 .navbar .navbar-toggler {
