@@ -40,12 +40,6 @@ window.addEventListener('load', () => {
       document.querySelector(
         '.featured-guests-section__more-btn',
       ).style.display = 'none';
-      const guestsToShow = document.querySelectorAll(
-        '.featured-guests-section__guests li.d-none',
-      );
-      [...guestsToShow].forEach((guest) => {
-        guest.classList.toggle('d-none');
-      });
     });
 
   // Load guests data dynamically on load
