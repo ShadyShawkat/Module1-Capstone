@@ -17,6 +17,10 @@
 
 [Live Demo Link](https://shadyshawkat.github.io/Module1-Capstone/)
 
+## Video
+
+[Here](https://www.loom.com/share/b7cde61edc814cd5b57b2f0b7eba373b) is a video of me walking you through the website and talking over the main features. 
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
