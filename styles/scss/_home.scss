@@ -4,6 +4,7 @@
   padding: 100px 20px;
   padding-left: Max(calc(20vw - 100px), 20px);
   padding-right: Max(calc(30vw - 100px), 20px);
+  min-height: 100vh;
 
   &::before {
     @include bg-img-control("../../assets/images/intro-bg-img.png");
@@ -13,7 +14,6 @@
 
   &__header {
     @supports (-webkit-background-clip: text) {
-      // background: url("/assets/images/intro-header-text-bg.png") no-repeat;
       background: url("../../assets/images/intro-header-text-bg.png") no-repeat;
       background-size: 100vw;
       color: transparent;
@@ -114,14 +114,17 @@
   }
 
   &__guests {
-    gap: 45px;
-    // padding-left: 10vw !important;
-    // padding-right: 5vw;
+    gap: 30px;
+    overflow: hidden;
+    max-height: 260px;
+    transition: max-height 0.5s linear;
 
     li {
       display: flex;
       gap: 15px;
       position: relative;
+      margin-top: 15px;
+      margin-left: 15px;
 
       &::before {
         position: absolute;
@@ -139,43 +142,68 @@
 
       .guest-img {
         height: map-get($feature-guest-img-widths, sm);
-        width: map-get($feature-guest-img-widths, sm);
+        min-width: map-get($feature-guest-img-widths, sm);
       }
 
       .guest-info {
         h3 {
           font-size: 22px;
           font-weight: bold;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            background: $color-light;
+            height: 2px;
+            width: 20px;
+            top: 130%;
+            display: block;
+          }
         }
 
         .guest-discription {
-          font-size: 16px;
+          font-size: 14px;
+          line-height: 16px;
         }
       }
     }
   }
 
-      &__more-btn {
-        border: 1px solid $color-light;
-        border-radius: 3px;
-        margin: 20px auto;
-        padding: 15px 30px;
-        display: block;
-        width: 73%;
-        text-align: center;
-        position: relative;
+  &__more-btn {
+    border: 1px solid $color-light;
+    border-radius: 3px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    display: block;
+    width: 73%;
+    text-align: center;
+    position: relative;
+    transition: all 0.25s linear;
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 15px;
-          height: 15px;
-          display: block;
-          border-bottom: 4px solid $color-orange;
-          border-left: 4px solid $color-orange;
-          left: 50%;
-          top: 35%;
-          transform: translateX(250%) rotate(-45deg);
-        }
+    &:hover,
+    &:focus-visible {
+      background-color: $color-orange;
+      color: white;
+
+      &::before {
+        border-bottom-color: $color-dark;
+        border-left-color: $color-dark;
       }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      display: block;
+      border-bottom: 4px solid $color-orange;
+      border-left: 4px solid $color-orange;
+      left: 50%;
+      top: 35%;
+      transform: translateX(250%) rotate(-45deg);
+      transition: all 0.25s linear;
+    }
+  }
 }
