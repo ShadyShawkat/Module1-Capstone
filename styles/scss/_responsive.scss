@@ -1,6 +1,6 @@
 // Media mixin (768px < width < 992px)
 @include media-md {
-  .navbar {
+  .nav-wrapper {
     position: fixed !important;
     top: 0;
     background-color: white !important;

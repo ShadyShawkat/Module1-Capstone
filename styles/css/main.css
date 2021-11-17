@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-
 @font-face {
   font-family: "COCOGOOSE";
   src: url("../../assets/fonts/Cocogoose_trial.eot?") format("eot"), url("../../assets/fonts/Cocogoose_trial.woff") format("woff"), url("../../assets/fonts/Cocogoose_trial.ttf") format("truetype"), url("../../assets/fonts/Cocogoose_trial.svg#COCOGOOSE") format("svg");
@@ -13,7 +12,7 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -55,6 +54,11 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -79,16 +83,15 @@ button {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
   *::before,
   *::after {
     -webkit-animation-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -171,7 +174,7 @@ button {
   width: 100%;
   z-index: -1;
   -webkit-filter: brightness(60%);
-  filter: brightness(60%);
+          filter: brightness(60%);
 }
 
 .main-event-section__header {
@@ -188,7 +191,7 @@ button {
   top: 120%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-bottom: 1px solid #ec5242;
 }
 
@@ -196,8 +199,8 @@ button {
   background-color: #d3d3d338;
   gap: 10px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-event-section__topics li i {
@@ -237,7 +240,7 @@ button {
   top: 120%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-bottom: 1px solid #ec5242;
 }
 
@@ -251,6 +254,7 @@ button {
 
 .featured-guests-section__guests li {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 15px;
   position: relative;
@@ -322,19 +326,17 @@ button {
   left: 50%;
   top: 35%;
   -webkit-transform: translateX(250%) rotate(-45deg);
-  transform: translateX(250%) rotate(-45deg);
+          transform: translateX(250%) rotate(-45deg);
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
 
-.featured-guests-section__more-btn:hover,
-.featured-guests-section__more-btn:focus-visible {
+.featured-guests-section__more-btn:hover, .featured-guests-section__more-btn:focus-visible {
   background-color: #ec5242;
   color: white;
 }
 
-.featured-guests-section__more-btn:hover::before,
-.featured-guests-section__more-btn:focus-visible::before {
+.featured-guests-section__more-btn:hover::before, .featured-guests-section__more-btn:focus-visible::before {
   border-bottom-color: #272a31;
   border-left-color: #272a31;
 }
@@ -365,7 +367,7 @@ button {
   top: 120%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-bottom: 1px solid #ec5242;
 }
 
@@ -423,55 +425,45 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .navbar {
+  .nav-wrapper {
     position: fixed !important;
     top: 0;
     background-color: white !important;
   }
-
   .intro-section {
     padding-left: 15%;
     padding-right: 20%;
   }
-
   .intro-section .intro-section__description {
     max-width: 800px;
   }
-
   .about-page .intro-section {
     padding-left: 20%;
     padding-right: 20%;
   }
-
   .main-event-section__topics li {
     max-width: 250px;
   }
-
   .main-event-section__topics li p {
     text-align: center;
   }
-
   .featured-guests-section__guests {
     max-height: initial !important;
     gap: 30px;
     overflow: initial;
   }
-
   .featured-guests-section__guests li {
     -ms-flex-preferred-size: 47%;
-    flex-basis: 47%;
+        flex-basis: 47%;
     margin-top: 0;
     margin-left: 0;
   }
-
   .featured-guests-section__guests li::before {
     opacity: 0.4;
   }
-
   .featured-guests-section__guests li .guest-info h3 {
     font-size: 1.1rem;
   }
-
   .featured-guests-section__guests li .guest-info .guest-discription {
     font-size: 0.7rem;
     line-height: 0.9rem;
@@ -482,44 +474,45 @@ button {
   .navbar-nav {
     background-color: transparent !important;
   }
-
   .featured-guests-section__guests {
     gap: 40px;
   }
-
   .featured-guests-section__guests li {
     -ms-flex-preferred-size: 47%;
-    flex-basis: 47%;
+        flex-basis: 47%;
     margin-top: 0;
     margin-left: 0;
   }
-
   .featured-guests-section__guests li::before {
     height: 99px;
     min-width: 99px;
   }
-
   .featured-guests-section__guests li .guest-img {
     height: 165px;
     min-width: 165px;
   }
-
   .featured-guests-section__guests li .guest-info h3 {
     font-size: 1.2rem;
   }
-
   .featured-guests-section__guests li .guest-info .guest-discription {
     font-size: 0.85rem;
     line-height: 1rem;
   }
 }
 
-.navbar {
-  height: 70px;
-  position: absolute;
+.nav-wrapper {
+  position: fixed;
   width: 100%;
   z-index: 1;
   background-color: transparent;
+}
+
+.nav-wrapper .black-nav a {
+  font-size: 0.85rem;
+}
+
+.navbar {
+  height: 70px;
 }
 
 .navbar .navbar-toggler {
@@ -542,7 +535,7 @@ button {
   top: 120%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-bottom: 1px solid #ec5242;
 }
 
@@ -564,5 +557,6 @@ button {
 
 .about-page .footer-section__banner .cc-logo {
   -webkit-filter: invert(85%);
-  filter: invert(85%);
+          filter: invert(85%);
 }
+/*# sourceMappingURL=main.css.map */

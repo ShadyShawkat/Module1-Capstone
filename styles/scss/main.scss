@@ -7,12 +7,19 @@
 @import "./about";
 @import "./responsive";
 
-.navbar {
-  height: 70px;
-  position: absolute;
+.nav-wrapper {
+  position: fixed;
   width: 100%;
   z-index: 1;
   background-color: transparent;
+
+  .black-nav a{
+    font-size: 0.85rem;
+  }
+}
+
+.navbar {
+  height: 70px;
   // background-color: white;
 
   .navbar-toggler {
