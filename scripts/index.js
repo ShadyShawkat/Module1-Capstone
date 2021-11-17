@@ -1,59 +1,59 @@
 const guestsData = [
   {
-    name: "Ed Sheeran",
-    imageUrl: "./assets/images/feat-guest-edsheeran.png",
-    imgAltText: "Ed Sheeran image",
+    name: 'Ed Sheeran',
+    imageUrl: './assets/images/feat-guest-edsheeran.png',
+    imgAltText: 'Ed Sheeran image',
     description:
       'Get to see Ed Sheeran playing "Fix You" with us and much more.',
   },
   {
-    name: "Beyonce",
-    imageUrl: "./assets/images/feat-guest-beyonce.png",
-    imgAltText: "Beyonce image",
+    name: 'Beyonce',
+    imageUrl: './assets/images/feat-guest-beyonce.png',
+    imgAltText: 'Beyonce image',
     description:
       'Meet Beyonce and listen to the beloved "Hymn For The Weekend"',
   },
   {
-    name: "The Weekend",
-    imageUrl: "./assets/images/feat-guest-theweekend.png",
-    imgAltText: "The Weekend image",
+    name: 'The Weekend',
+    imageUrl: './assets/images/feat-guest-theweekend.png',
+    imgAltText: 'The Weekend image',
     description:
-      "Watch us collab with The Weekened and listen so some of his popular songs.",
+      'Watch us collab with The Weekened and listen so some of his popular songs.',
   },
   {
-    name: "Kanye West",
-    imageUrl: "./assets/images/feat-guest-kanyewest.png",
-    imgAltText: "Kanye West image",
+    name: 'Kanye West',
+    imageUrl: './assets/images/feat-guest-kanyewest.png',
+    imgAltText: 'Kanye West image',
     description:
       'Listen to "Homecoming" with Kanye West and meet him on stage.',
   },
 ];
 
-window.addEventListener("load", (e) => {
+window.addEventListener('load', () => {
   // Load more guests on "More" button click
   document
-    .querySelector(".featured-guests-section__more-btn")
-    .addEventListener("click", () => {
+    .querySelector('.featured-guests-section__more-btn')
+    .addEventListener('click', () => {
       document.querySelector(
-        ".featured-guests-section__guests"
-      ).style.maxHeight = "1000px";
+        '.featured-guests-section__guests',
+      ).style.maxHeight = '1000px';
       document.querySelector(
-        ".featured-guests-section__more-btn"
-      ).style.display = "none";
+        '.featured-guests-section__more-btn',
+      ).style.display = 'none';
       const guestsToShow = document.querySelectorAll(
-        ".featured-guests-section__guests li.d-none"
+        '.featured-guests-section__guests li.d-none',
       );
       [...guestsToShow].forEach((guest) => {
-        guest.classList.toggle("d-none");
+        guest.classList.toggle('d-none');
       });
     });
 
   // Load guests data dynamically on load
   const guestsListInDom = document.querySelector(
-    ".featured-guests-section__guests"
+    '.featured-guests-section__guests',
   );
   guestsData.forEach((guest) => {
-    const guestListItem = document.createElement("li");
+    const guestListItem = document.createElement('li');
     guestListItem.innerHTML = `
       <img
         class="guest-img"
