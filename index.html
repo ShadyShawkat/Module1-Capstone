@@ -20,13 +20,15 @@
     <link rel="stylesheet" href="./styles/css/main.css" />
     <!-- <script src="https://kit.fontawesome.com/a8ab9db749.js" crossorigin="anonymous"></script> -->
   </head>
-  <body>
-    <header class="mb-5">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light pb-0">
-        <div class="container-fluid px-0 px-md-3">
-          <a class="navbar-brand d-none d-md-block px-3" href="./index.html">Navbar</a>
+  <body style="position: relative">
+    <header class="mb-md-5">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="d-flex justify-content-between align-item-center container-fluid px-0">
+          <a class="navbar-brand d-none d-md-flex pt-0 ps-3" href="./index.html">
+            <img src="./assets/images/logo.png" class="my-auto" alt="Logo" width="200" height="24">
+          </a>
           <button
-            class="navbar-toggler px-3"
+            class="navbar-toggler px-3 mx-2"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbar"
@@ -36,8 +38,8 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav ms-auto mb-lg-0 mt-1">
+          <div class="collapse navbar-collapse mt-2" id="navbar">
+            <ul class="navbar-nav ms-auto mb-lg-0 bg-light pe-3">
               <li class="nav-item p-1">
                 <a class="nav-link active ps-3" href="./index.html">Home</a>
               </li>
@@ -140,26 +142,26 @@
       <li class="col-md-5 d-none d-md-flex">
         <img
           class="guest-img col-4"
-          src="./assets/images/feat-guest-edsheeran.png"
-          alt="Ed Sheeran image"
+          src="./assets/images/feat-guest-theweekend.png"
+          alt="The Weekend image"
         />
         <div class="guest-info col-8">
-          <h3>Ed Sheeran</h3>
+          <h3>The Weekend</h3>
           <p class="guest-discription">
-            Get to see Ed Sheeran playing "Fix You" with us and much more.
+            Watch us collab with The Weekened and listen so some of his popular songs.
           </p>
         </div>
       </li>
       <li class="col-md-5 d-none d-md-flex">
         <img
           class="guest-img col-4"
-          src="./assets/images/feat-guest-beyonce.png"
-          alt="Beyonce image"
+          src="./assets/images/feat-guest-kanyewest.png"
+          alt="Kanye West image"
         />
         <div class="guest-info col-8">
-          <h3>Beyonce</h3>
+          <h3>Kanye West</h3>
           <p class="guest-discription">
-            Meet Beyonce and listen to the beloved "Hymn For The Weekend".
+            Listen to "Homecoming" with Kanye West and meet him on stage.
           </p>
         </div>
       </li>
@@ -239,5 +241,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
